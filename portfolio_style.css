@@ -2,6 +2,7 @@
 body, html {
     margin: 0;
     height: 100%;
+    background-color: #FDF8D8;
 }
 
 .grid-container {
@@ -24,11 +25,39 @@ body, html {
 }
 
 /* Αντιστοίχιση των κλάσεων με τις περιοχές του Grid */
-.header { grid-area: header; background-color: #2c3e50; color: white; }
-.sidebar { grid-area: sidebar; background-color: #34495e; color: white; }
+.header { grid-area: header; background-color: #313628; color: white; }
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #fdf5e6; /* Το κρεμ χρώμα της εικόνας */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #ddd;
+}
+
+.vertical-text {
+    /* Αυτό κάνει το κείμενο κάθετο */
+    writing-mode: vertical-rl; 
+    text-orientation: upright; /* Κάνει τα γράμματα να στέκονται όρθια */
+    
+    /* Στυλ Γραμματοσειράς */
+    font-size: 5rem;
+    font-weight: 900;
+    color: #b22222; /* Το βαθύ κόκκινο χρώμα */
+    letter-spacing: -5px; /* Τα γράμματα είναι πολύ κοντά στην εικόνα */
+    
+    /* Για να πιάνει όλο το ύψος */
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
 .top-right { grid-area: top-right; background-color: #ecf0f1; }
+
 .bottom-right { grid-area: bottom-right; background-color: #bdc3c7; }
-.footer { grid-area: footer; background-color: #2c3e50; color: white; }
+
+.footer { grid-area: footer; background-color: #313628; color: white; }
 
 /* Κοινό στυλ για όλα τα πάνελ */
 .grid-container > * {
