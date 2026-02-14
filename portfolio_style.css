@@ -30,9 +30,11 @@ body, html {
     grid-area: header;
     background-color: #313628; 
     color: #FFFFFF; 
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 300;
+    display: flex; /* flex για να κεντραριστεί το κείμενο */
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem; /* Αυξήθηκε */
+    font-weight: bold;
 }
 
 .sidebar {
@@ -52,7 +54,7 @@ body, html {
     font-weight: 900;
     color: #CC2936; /* Το βαθύ κόκκινο χρώμα */
     letter-spacing: -5px; /* Τα γράμματα είναι πολύ κοντά στην εικόνα */
-    font-family: "Georgia, serif";
+    font-family: Georgia, serif;
     
     /* Για να πιάνει όλο το ύψος */
     display: flex;
@@ -73,9 +75,10 @@ body, html {
     color: #CC2936;
     text-align: right;
     text-shadow: -4px 2px 5px #383C42;
-    font-family: "Georgia, serif";
+    font-family: Georgia, serif;
     font-size: 3rem;
     font-weight: 500;
+    position: relative; /* Απαραίτητο για να δουλέψει το left */
     animation: mymove 4s;
 }
 
@@ -88,5 +91,5 @@ body, html {
 
 @keyframes mymove {
   from {left: 0px;}
-  to {right: 200px;}
+  to {left: 50px;}
 }
