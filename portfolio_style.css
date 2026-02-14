@@ -53,7 +53,19 @@ body, html {
 
 .top-right { grid-area: top-right; }
 
+.top-right h1 {
+    color: #CC2936;
+    text-align: right;
+    text-shadow: 2px 2px 4px #000000;
+}
+
 .bottom-right { grid-area: bottom-right; }
+
+.bottom-right h1 {
+    color: #CC2936;
+    text-align: right;
+    text-shadow: 2px 2px 4px #000000;
+}
 
 .footer { grid-area: footer; background-color: #313628; color: #FFFFFF; }
 
