@@ -25,7 +25,13 @@ body, html {
 }
 
 /* Αντιστοίχιση των κλάσεων με τις περιοχές του Grid */
-.header { grid-area: header; background-color: #313628; color: #FFFFFF; }
+.header { 
+    grid-area: header;
+    background-color: #313628; 
+    color: #FFFFFF; 
+    text-align: center;
+    font-size: 1rem;
+}
 
 .sidebar {
     grid-area: sidebar; /* Το κρεμ χρώμα της εικόνας */
@@ -57,6 +63,7 @@ body, html {
     color: #CC2936;
     text-align: right;
     text-shadow: 2px 2px 4px #000000;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .bottom-right { grid-area: bottom-right; }
@@ -65,6 +72,7 @@ body, html {
     color: #CC2936;
     text-align: right;
     text-shadow: 2px 2px 4px #000000;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .footer { grid-area: footer; background-color: #313628; color: #FFFFFF; }
