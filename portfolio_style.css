@@ -33,7 +33,7 @@ body, html {
     display: flex; /* flex για να κεντραριστεί το κείμενο */
     justify-content: center;
     align-items: center;
-    font-size: 4rem; /* Αυξήθηκε */
+    font-size: 3rem; /* Αυξήθηκε */
     font-weight: bold;
 }
 
@@ -69,11 +69,14 @@ body, html {
     flex-direction: column; /* Τα βάζει το ένα κάτω από το άλλο */
     align-items: flex-start; /* Τα στοιχίζει αριστερά */
     padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 .bottom-right h1, .top-right h1 {
     color: #CC2936;
-    text-align: right;
+    text-align: left;
     text-shadow: -4px 2px 5px #383C42;
     font-family: Georgia, serif;
     font-size: 3rem;
