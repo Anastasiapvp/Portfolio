@@ -7,21 +7,22 @@ body, html {
 
 .grid-container {
     display: grid;
-    /* 3 στήλες και 3 γραμμές */
-    grid-template-columns: 250px 1fr; 
+    /* 1. Ορίζεις τις στήλες (το sidebar και τον υπόλοιπο χώρο) */
+    grid-template-columns: 200px 1fr; 
+    
+    /* 2. Ορίζεις τα ύψη των γραμμών */
     grid-template-rows: 80px 1fr 1fr 60px;
     
-    /* Εδώ "ζωγραφίζουμε" το layout */
+    /* 3. Σχεδιάζεις το layout */
     grid-template-areas: 
         "header header"
         "sidebar top-right"
         "sidebar bottom-right"
         "footer footer";
         
-    height: 100vh; /* Γεμίζει όλο το ύψος της οθόνης */
-    gap: 0px;    /* Απόσταση μεταξύ των πάνελ */
-    padding: 5px;
-    box-sizing: border-box;
+    height: 100vh; 
+    gap: 0px;
+    box-sizing: border-box; /* Για να μην "πετάει" το footer έξω */
 }
 
 /* Αντιστοίχιση των κλάσεων με τις περιοχές του Grid */
@@ -46,29 +47,27 @@ body, html {
     text-orientation: upright; /* Κάνει τα γράμματα να στέκονται όρθια */
     
     /* Στυλ Γραμματοσειράς */
-    font-size: 5rem;
+    font-size: clamp(2rem, 8vh, 5rem);
     font-weight: 900;
     color: #CC2936; /* Το βαθύ κόκκινο χρώμα */
     letter-spacing: -5px; /* Τα γράμματα είναι πολύ κοντά στην εικόνα */
     
     /* Για να πιάνει όλο το ύψος */
-    height: 100%;
     display: flex;
     justify-content: space-around;
 }
 
 .top-right { grid-area: top-right; }
 
-.top-right h1 {
-    color: #CC2936;
-    text-align: right;
-    text-shadow: 2px 2px 4px #000000;
-    font-family: "Lucida Console", "Courier New", monospace;
-}
-
 .bottom-right { grid-area: bottom-right; }
 
-.bottom-right h1 {
+.top-right, .bottom-right {
+    flex-direction: column; /* Τα βάζει το ένα κάτω από το άλλο */
+    align-items: flex-start; /* Τα στοιχίζει αριστερά */
+    padding: 20px;
+}
+
+.bottom-right h1, .top-right h1 {
     color: #CC2936;
     text-align: right;
     text-shadow: 2px 2px 4px #000000;
@@ -76,12 +75,3 @@ body, html {
 }
 
 .footer { grid-area: footer; background-color: #313628; color: #FFFFFF; }
-
-/* Κοινό στυλ για όλα τα πάνελ */
-.grid-container > * {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    font-weight: bold;
-}
