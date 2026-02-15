@@ -94,5 +94,5 @@ body, html {
 
 @keyframes mymove {
   from {left: 0px;}
-  to {left: 50px;}
+  to {left: 500px;}
 }
