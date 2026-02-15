@@ -96,3 +96,42 @@ body, html {
   from {transform: translateX(-300px);}
   to {transform: translateX(0px);}
 }
+
+/* Media Query για κινητά */
+@media (max-width: 768px) {
+    .grid-container {
+        /* πλέγμα σε 1 στήλη */
+        grid-template-columns: 1fr;
+        
+        /* νέες γραμμές: το sidebar θα έχει πλέον συγκεκριμένο ύψος */
+        grid-template-rows: 60px 150px 1fr 1fr 50px;
+        
+        /* οι περιοχές ώστε να είναι η μία κάτω από την άλλη */
+        grid-template-areas: 
+            "header"
+            "sidebar"
+            "top-right"
+            "bottom-right"
+            "footer";
+            
+        height: auto; /* Επιτρέπουμε στο site να μεγαλώσει σε ύψος όσο χρειάζεται */
+    }
+
+    .vertical-text {
+        /* Στο κινητό το κείμενο δεν μπορεί να είναι κάθετο, οπότε το επαναφέρουμε */
+        writing-mode: horizontal-tb; 
+        text-orientation: mixed;
+        font-size: 2.5rem; /* Μικραίνουμε τη γραμματοσειρά */
+        letter-spacing: 2px;
+        height: auto;
+    }
+
+    .header {
+        font-size: 1.5rem; /* Μικραίνουμε το Welcome μήνυμα */
+    }
+
+    .top-right h1, .bottom-right h1 {
+        font-size: 2rem; /* Μικραίνουμε τους τίτλους About & Contacts */
+        text-align: left; /* Στο κινητό προτιμάμε αριστερή στοίχιση */
+    }
+}
