@@ -77,7 +77,6 @@ body, html {
 .bottom-right h1, .top-right h1 {
     color: #CC2936;
     text-align: right;
-    text-shadow: -4px 2px 5px #383C42;
     font-family: Georgia, serif;
     font-size: 3rem;
     font-weight: 500;
