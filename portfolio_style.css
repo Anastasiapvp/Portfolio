@@ -93,6 +93,6 @@ body, html {
 }
 
 @keyframes mymove {
-  from {left: 0px;}
-  to {right: 500px;}
+  from {transform: translateX(-50px);}
+  to {transform: translateX(0px);}
 }
